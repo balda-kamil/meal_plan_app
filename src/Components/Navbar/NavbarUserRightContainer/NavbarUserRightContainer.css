@@ -1,0 +1,9 @@
+.nav__user-right{
+  display: flex;
+  align-items: center;
+}
+
+.nav__user-right span{
+  margin: 0 10px;
+  font-weight: bold;
+}

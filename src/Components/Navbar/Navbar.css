@@ -4,8 +4,25 @@
 
 nav{
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
   max-width: 978px;
   margin: 0 auto;
+}
+
+.nav__link--active{
+  color: #ff801a;
+  position: relative;
+}
+
+.nav__link--active::after{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: 24px;
+  background-color: #ffc79a;
+  right: calc(50% - 12.5px)
 }
 
 .nav__links{
@@ -37,5 +54,4 @@ nav{
   font-size: 14px;
   line-height: 79px;
   font-weight: 600;
-  color: #828282;
 }

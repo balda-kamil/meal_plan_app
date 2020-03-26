@@ -12,8 +12,8 @@ function Navbar(){
           <NavbarSingleLink linkTo="/recipies" text="Recipies"/>
           <NavbarSingleLink linkTo="/challenge" text="Challenge"/>
         </ul>
+        <NavbarUserRightContainer/>
       </nav>
-      <NavbarUserRightContainer/>
     </div>
   )
 }

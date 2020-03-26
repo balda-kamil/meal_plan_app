@@ -1,4 +1,5 @@
 import React from 'react'
+import './NavbarUserRightContainer.css'
 import NavbarUserPhoto from './NavbarUserPhoto'
 import NavbarUserName from './NavbarUserName'
 
