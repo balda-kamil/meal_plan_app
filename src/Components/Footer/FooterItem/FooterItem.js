@@ -11,18 +11,20 @@ function FooterItem(props){
           buttonTwoText,
           buttonTwoLogo } = props
   return(
-    <div>
+    <div className="footer__item">
       { title && <h6>{ title }</h6> }
       { text && <p>{ text }</p> }
       { buttonOne && 
         <button>
-          { buttonOneText } 
           { buttonOneLogo && <img src={ buttonOneLogo } alt={ buttonOneText } /> }
+          { buttonOneText } 
+          <img src={`${process.env.PUBLIC_URL}/img/arrow_right.svg`} alt="arrow right"/>
         </button> }
       { buttonTwo && 
         <button>
-          { buttonTwoText } 
           { buttonTwoLogo && <img src={ buttonTwoLogo } alt={ buttonTwoText } /> }
+          { buttonTwoText } 
+          <img src={`${process.env.PUBLIC_URL}/img/arrow_right.svg`} alt="arrow right"/>
         </button> }
     </div>
   )
