@@ -11,7 +11,7 @@ const data = [
     number: 1
   },
   {
-    title: "Bod•e Trainer in your pocket",
+    title: "Bod·ē Trainer in your pocket",
     text: "Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.",
     buttonOne: true,
     buttonOneText: "iOS",
