@@ -32,19 +32,33 @@ class TypeOfFoodOptions extends Component {
   }
 
   handleClick = optionId => {
-    console.log(optionId)
     this.setState(prevState => ({
       options: prevState.options.map(
         option => option.id === optionId ? {...option, disabled: !option.disabled } : option 
       )
     }))
+    const { options } = this.state
+    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(options) )
   }
 
   optionStyle = optionId => ( 
    this.state.options.filter(option => option.id === optionId)[0].disabled ?  true : false
   )
+
+  componentDidUpdate = () => {
+    const { options } = this.state
+    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(options) )
+  }
+
+  componentWillMount = () => {
+    let data = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
+    this.setState({
+      options: data
+    })
+  }
   
   render(){
+    console.log(this.state.options)
     return (
       <div>
         <p className="xs-l-gray">SELECT YOUR PROTEIN OPTIONS</p>

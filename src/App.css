@@ -14,3 +14,7 @@ a{
   max-width: 978px;
   margin: 0 auto
 }
+
+button:focus{
+  outline: 0;
+}
