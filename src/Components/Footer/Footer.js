@@ -7,7 +7,8 @@ const data = [
     title: "Running out of products?",
     text: "Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.",
     buttonOne: true,
-    buttonOneText: "Buy now"
+    buttonOneText: "Buy now",
+    number: 1
   },
   {
     title: "Bod•e Trainer in your pocket",
@@ -17,13 +18,15 @@ const data = [
     buttonOneLogo: `${process.env.PUBLIC_URL}/img/apple_logo.png`,
     buttonTwo: true,
     buttonTwoText: "Android",
-    buttonTwoLogo: `${process.env.PUBLIC_URL}/img/android_logo.png`
+    buttonTwoLogo: `${process.env.PUBLIC_URL}/img/android_logo.png`,
+    number: 2
   },
   {
     title: "Frequently Asked Questions",
     text: "Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.",
     buttonOne: true,
     buttonOneText: "Read FAQs",
+    number: 3
   }
 ]
 
@@ -39,6 +42,7 @@ function Footer(){
                             buttonTwo={item.buttonTwo}
                             buttonTwoText={item.buttonTwoText}
                             buttonTwoLogo={item.buttonTwoLogo}
+                            key={item.number}
                           /> ) }
     </footer>
   )

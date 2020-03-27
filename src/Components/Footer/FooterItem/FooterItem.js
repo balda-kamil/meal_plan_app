@@ -9,8 +9,10 @@ function FooterItem(props){
           buttonOneLogo,
           buttonTwo,
           buttonTwoText,
-          buttonTwoLogo } = props
+          buttonTwoLogo,
+          } = props
   return(
+   
     <div className="footer__item">
       { title && <h6>{ title }</h6> }
       { text && <p>{ text }</p> }

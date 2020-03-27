@@ -1,15 +1,21 @@
 import React from 'react';
 import Navbar from './../Navbar/Navbar'
 import Footer from './../Footer/Footer'
-import DashboardTop from './DashboardTop/DashboardTop'
+import ProgressDots from './ProgressDots/ProgressDots'
+import TimeChanger from './TimeChanger/TimeChanger'
+import TypeOfFoodOptions from './TypeOfFoodOptions/TypeOfFoodOptions'
+import './Dashboard.css'
 
 function Dashboard() {
   return (
     <>
       <Navbar/>
       <div className="app__main__content-wrapper">
-        <DashboardTop/>
-          dashboard
+        <div className="dashboardTop">
+          <ProgressDots />
+          <TimeChanger />
+          <TypeOfFoodOptions />
+        </div>
         <Footer/>
       </div>
     </>

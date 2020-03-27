@@ -1,0 +1,57 @@
+.ProgressDots__items{
+  display: flex;
+  position: relative;
+}
+
+.ProgressDots__item{
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.ProgressDots__item--past,
+.ProgressDots__item--feature,
+.ProgressDots__item--current{
+  width: 10px;
+  height: 10px;
+  border: 0.00001px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  position: relative
+}
+
+.ProgressDots__item--past{
+  background-color: #b2c200;
+}
+
+.ProgressDots__item--feature{
+  background-color: #dbdbdb;
+}
+
+.ProgressDots__item--current{
+  width: 9px;
+  height: 9px;
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+
+
+.ProgressDots__item-line--past{
+  position: absolute;
+  width: 10px;
+  top: 4px;
+  height: 2px;
+  background-color: #b2c200;
+  left: 10px;
+}
+
+.ProgressDots__item-line--feature{
+  position: absolute;
+  width: 10px;
+  top: 4px;
+  height: 2px;
+  background-color: #dbdbdb;
+  left: -10px;
+}
