@@ -1,11 +1,46 @@
 import React from 'react'
 import './Footer.css'
+import FooterItem from './FooterItem/FooterItem'
+
+const data = [
+  {
+    title: "Running out of products?",
+    text: "Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.",
+    buttonOne: true,
+    buttonOneText: "Buy now"
+  },
+  {
+    title: "Bod•e Trainer in your pocket",
+    text: "Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.",
+    buttonOne: true,
+    buttonOneText: "iOS",
+    buttonOneLogo: `${process.env.PUBLIC_URL}/img/apple_logo.png`,
+    buttonTwo: true,
+    buttonTwoText: "Android",
+    buttonTwoLogo: `${process.env.PUBLIC_URL}/img/android_logo.png`
+  },
+  {
+    title: "Frequently Asked Questions",
+    text: "Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.",
+    buttonOne: true,
+    buttonOneText: "Read FAQs",
+  }
+]
 
 function Footer(){
   return(
-    <div>
-      Footer footer footer...
-    </div>
+    <footer>
+      { data.map( item => <FooterItem 
+                            title={item.title} 
+                            text={item.text} 
+                            buttonOne={item.buttonOne}
+                            buttonOneText={item.buttonOneText}
+                            buttonOneLogo={item.buttonOneLogo}
+                            buttonTwo={item.buttonTwo}
+                            buttonTwoText={item.buttonTwoText}
+                            buttonTwoLogo={item.buttonTwoLogo}
+                          /> ) }
+    </footer>
   )
 }
 

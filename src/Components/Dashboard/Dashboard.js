@@ -1,14 +1,18 @@
 import React from 'react';
 import Navbar from './../Navbar/Navbar'
 import Footer from './../Footer/Footer'
+import DashboardTop from './DashboardTop/DashboardTop'
 
 function Dashboard() {
   return (
-    <div>
+    <>
       <Navbar/>
-      dashboard
-      <Footer/>
-    </div>
+      <div className="app__main__content-wrapper">
+        <DashboardTop/>
+          dashboard
+        <Footer/>
+      </div>
+    </>
   );
 }
 

@@ -4,11 +4,13 @@ import Footer from './../Footer/Footer'
 
 function Challenge() {
   return (
-    <div>
+    <>
       <Navbar/>
-      challenge
+      <div className="app__main__content-wrapper">
+        challenge
       <Footer/>
-    </div>
+      </div>
+    </>
   );
 }
 

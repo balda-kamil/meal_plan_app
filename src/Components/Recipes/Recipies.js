@@ -5,11 +5,13 @@ import Footer from './../Footer/Footer'
 
 function Recipies() {
   return (
-    <div>
+    <>
       <Navbar/>
+      <div className="app__main__content-wrapper">
       recipies...dfsdfsdfsdfsd
       <Footer/>
     </div>
+    </>
   );
 }
 
