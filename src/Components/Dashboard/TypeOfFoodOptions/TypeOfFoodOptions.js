@@ -1,75 +1,22 @@
 import React, { Component } from 'react';
 import './TypeOfFoodOptions.css'
 import TypeOfFoodButtonChange from './TypeOfFoodButtonChange'
+import { withDashboard } from './../Dashboard'
 
 class TypeOfFoodOptions extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      options: [
-      { 
-        id: 1,
-        disabled: true 
-      },
-      { 
-        id: 2,
-        disabled: true 
-      },
-      { 
-        id: 3,
-        disabled: true 
-      },
-      { 
-        id: 4,
-        disabled: false
-       },
-      { 
-        id: 5,
-        disabled: false
-       }
-      ]
-    }
-  }
-
-  handleClick = optionId => {
-    this.setState(prevState => ({
-      options: prevState.options.map(
-        option => option.id === optionId ? {...option, disabled: !option.disabled } : option 
-      )
-    }))
-    const { options } = this.state
-    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(options) )
-  }
-
-  optionStyle = optionId => ( 
-   this.state.options.filter(option => option.id === optionId)[0].disabled ?  true : false
-  )
-
-  componentDidUpdate = () => {
-    const { options } = this.state
-    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(options) )
-  }
-
-  componentWillMount = () => {
-    let data = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
-    this.setState({
-      options: data
-    })
-  }
-  
   render(){
-    console.log(this.state.options)
+    const { handleOptionFoodClick, optionStyle } = this.props
     return (
       <div>
         <p className="xs-l-gray">SELECT YOUR PROTEIN OPTIONS</p>
-        <TypeOfFoodButtonChange optionId={1} optionStyle={ this.optionStyle(1) } onClick={() => this.handleClick(1)}/>
-        <TypeOfFoodButtonChange optionId={2} optionStyle={ this.optionStyle(2) } onClick={() => this.handleClick(2)}/>
-        <TypeOfFoodButtonChange optionId={3} optionStyle={ this.optionStyle(3) } onClick={() => this.handleClick(3)}/>
-        <TypeOfFoodButtonChange optionId={4} optionStyle={ this.optionStyle(4) } onClick={() => this.handleClick(4)}/>
-        <TypeOfFoodButtonChange optionId={5} optionStyle={ this.optionStyle(5) } onClick={() => this.handleClick(5)}/>
+        <TypeOfFoodButtonChange optionId={1} optionStyle={ optionStyle(1) } onClick={() => handleOptionFoodClick(1)}/>
+        <TypeOfFoodButtonChange optionId={2} optionStyle={ optionStyle(2) } onClick={() => handleOptionFoodClick(2)}/>
+        <TypeOfFoodButtonChange optionId={3} optionStyle={ optionStyle(3) } onClick={() => handleOptionFoodClick(3)}/>
+        <TypeOfFoodButtonChange optionId={4} optionStyle={ optionStyle(4) } onClick={() => handleOptionFoodClick(4)}/>
+        <TypeOfFoodButtonChange optionId={5} optionStyle={ optionStyle(5) } onClick={() => handleOptionFoodClick(5)}/>
       </div>
     );
   }
 }
 
-export default TypeOfFoodOptions;
+export default withDashboard(TypeOfFoodOptions);

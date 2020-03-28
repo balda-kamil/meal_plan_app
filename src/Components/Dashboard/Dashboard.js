@@ -14,7 +14,57 @@ export const DashboardConsumer = DashboardContext.Consumer
 class Dashboard extends React.Component {
   state = {
     progressDots: progressDotsJSON,
+    typeOfFoodOptions: [
+      { 
+        id: 1,
+        disabled: true 
+      },
+      { 
+        id: 2,
+        disabled: true 
+      },
+      { 
+        id: 3,
+        disabled: true 
+      },
+      { 
+        id: 4,
+        disabled: false
+       },
+      { 
+        id: 5,
+        disabled: false
+       }
+    ],
+
+    handleOptionFoodClick: optionId => {
+      this.setState(prevState => ({
+        typeOfFoodOptions: prevState.typeOfFoodOptions.map(
+          option => option.id === optionId ? {...option, disabled: !option.disabled } : option 
+        )
+      }))
+      const { typeOfFoodOptions } = this.state
+      localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(typeOfFoodOptions) )
+    },
+
+    optionStyle: optionId => ( 
+      this.state.typeOfFoodOptions.filter(option => option.id === optionId)[0].disabled ?  true : false
+     )
+
   }
+
+  componentDidUpdate = () => {
+    const { typeOfFoodOptions } = this.state
+    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(typeOfFoodOptions) )
+  }
+
+  componentWillMount = () => {
+    let data = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
+    this.setState({
+      typeOfFoodOptions: data
+    })
+  }
+
   render(){
     return (
       <>
@@ -23,10 +73,9 @@ class Dashboard extends React.Component {
           <div className="dashboardTop">
             <DashboardContext.Provider value={ this.state }>
               <ProgressDots />
-
+              <TimeChanger />
+              <TypeOfFoodOptions />
             </DashboardContext.Provider>
-            <TimeChanger />
-            <TypeOfFoodOptions />
           </div>
           <Footer/>
         </div>
