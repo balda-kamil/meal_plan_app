@@ -1,0 +1,10 @@
+.plan__workout p{
+  margin: 0;
+  font-size: 11px;
+}
+
+.plan__workout-little_arrow{
+  width: 3px;
+  height: 5px;
+  margin-left: 6px;
+}
