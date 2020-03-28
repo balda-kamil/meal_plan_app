@@ -73,6 +73,13 @@ class Dashboard extends React.Component {
       typeOfFoodOptions: typeOfFoodOptionsState,
       selectedWeek: SelectedWeekState
     })
+    fetch(`${process.env.PUBLIC_URL}/data/days.json`)
+          .then(res => res.json())
+          .then(days =>
+            this.setState({
+              days,
+            }))
+          .catch(err => err.message)
   }
 
   render(){

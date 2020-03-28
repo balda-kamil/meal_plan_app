@@ -6,7 +6,6 @@ function FirstColumn(){
     backgroundImage: 'url(' + `${process.env.PUBLIC_URL}` + '/img/plan_background_left.png)',
     backgroundSize: "cover",
     }
-
   return(
     <div className="dashboard__diet-plan_first-column" style={ backgroundStyle }>
       <div className="plan__day"/>

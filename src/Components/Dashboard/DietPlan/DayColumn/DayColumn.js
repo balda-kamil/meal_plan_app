@@ -1,10 +1,18 @@
 import React from 'react'
 import './DayColumn.css'
+import DayNumber from './DayNumber/DayNumber'
 
-function DayColumn(){
+function DayColumn(props){
   return(
     <div>
-      DayColumn
+      <DayNumber/>
+      {/* <DietPlanColumnItem/>
+      <DietPlanColumnItem/>
+      <DietPlanColumnItem/>
+      <DietPlanColumnItem/>
+      <DietPlanColumnItem/>
+      <DietPlanColumnItem/>
+      <DietPlanColumnCarboAndWorkout/> */}
     </div>
   )
 }
