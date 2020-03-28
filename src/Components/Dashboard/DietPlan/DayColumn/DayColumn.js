@@ -3,9 +3,11 @@ import './DayColumn.css'
 import DayNumber from './DayNumber/DayNumber'
 
 function DayColumn(props){
+  const { id, name } = props
+  console.log(props)
   return(
     <div>
-      <DayNumber/>
+      <DayNumber id={id} name={name} />
       {/* <DietPlanColumnItem/>
       <DietPlanColumnItem/>
       <DietPlanColumnItem/>

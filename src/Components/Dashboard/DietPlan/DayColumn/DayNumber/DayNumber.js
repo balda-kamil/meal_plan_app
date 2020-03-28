@@ -1,9 +1,9 @@
 import React from 'react'
 
-function DayNumber(){
+function DayNumber(props){
   return(
     <div>
-      
+      <p>{props.name}</p>
     </div>
   )
 }

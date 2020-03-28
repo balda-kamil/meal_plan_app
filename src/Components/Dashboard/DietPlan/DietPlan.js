@@ -11,13 +11,13 @@ function DietPlan(props){
   return(
     <div className="dashboard__dietPlan-container">
       <FirstColumn/>
-      <DayColumn/>
-      <DayColumn/>
-      <DayColumn/>
-      <DayColumn/>
-      <DayColumn/>
-      <DayColumn/>
-      <DayColumn/>
+
+      { days && days.map( day => 
+        <DayColumn 
+          key={day.id}
+          id={day.id}
+          name={day.name}
+        />) }
     </div>
   )
 }
