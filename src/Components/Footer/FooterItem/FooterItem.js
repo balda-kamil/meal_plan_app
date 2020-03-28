@@ -19,13 +19,13 @@ function FooterItem(props){
       { buttonOne && 
         <button>
           { buttonOneLogo && <img src={ buttonOneLogo } alt={ buttonOneText } /> }
-          { buttonOneText } 
+          <span>{ buttonOneText }</span>
           <img src={`${process.env.PUBLIC_URL}/img/arrow_right.svg`} alt="arrow right"/>
         </button> }
       { buttonTwo && 
         <button>
           { buttonTwoLogo && <img src={ buttonTwoLogo } alt={ buttonTwoText } /> }
-          { buttonTwoText } 
+          <span>{ buttonTwoText }</span> 
           <img src={`${process.env.PUBLIC_URL}/img/arrow_right.svg`} alt="arrow right"/>
         </button> }
     </div>

@@ -1,24 +1,29 @@
 import React from 'react';
 import './ProgressDots.css'
-import  data_progress from './data_progress.json'
+import { withDashboard } from './../Dashboard'
 
-function ProgressDots() {
+class ProgressDots extends React.Component {  
+  render(){
+    const { progressDots }  = this.props
   return (
-    <div>
-    <p className="xs-l-gray">YOUR 12 WEEK PROGRESS</p>
-    <div className="ProgressDots__items">
-    { data_progress.data.map(dot =>  <div className="ProgressDots__item" key={dot.weekNumber}>
-                                        <div className={ dot.done ? "ProgressDots__item--past" : "ProgressDots__item--feature"}></div>
-                                        { dot.current && <div className="ProgressDots__item--current"></div> }
-                                        <div className={ dot.done ? "ProgressDots__item-line--past" : "ProgressDots__item-line--feature"}></div>
-                                        <p className="xs-l-gray">{dot.weekNumber}</p>
-                                      </div> 
-                                      
+    <>
+      <div>
+        <p className="xs-l-gray">YOUR 12 WEEK PROGRESS</p>
+        <div className="ProgressDots__items">
+        { progressDots.data.map(dot =>  <div className="ProgressDots__item" key={dot.weekNumber}>
+                                          <div className={ dot.done ? "ProgressDots__item--past" : "ProgressDots__item--feature"}></div>
+                                          { dot.current && <div className="ProgressDots__item--current"></div> }
+                                          <div className={ dot.done ? "ProgressDots__item-line--past" : "ProgressDots__item-line--feature"}></div>
+                                          <p className="xs-l-gray">{dot.weekNumber}</p>
+                                        </div> 
+                                          
                               )
-      }
-    </div>
-    </div>
+          }
+        </div>
+      </div>
+    </>
   );
+  }
 }
 
-export default ProgressDots;
+export default withDashboard(ProgressDots);

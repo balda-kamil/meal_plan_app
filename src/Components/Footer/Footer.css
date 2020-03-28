@@ -45,12 +45,16 @@ footer button img{
   max-height: 19px;
 }
 
-footer button img:first-child{
-  padding: 0 7px 0 11px
+footer button img{
+  padding-left: 11px;
 }
 
-footer button img:nth-child(2){
-  padding: 0 12px 0 11px
+footer button span{
+  padding-left: 11px;
+}
+
+footer button{
+  padding-right: 11px;
 }
 
 footer button{
