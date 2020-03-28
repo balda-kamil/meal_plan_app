@@ -56,6 +56,12 @@
   margin: 0 auto;
 }
 
+.column__item-checkout-ico{
+  position: absolute;
+  top: 6px;
+  right: 6px
+}
+
 .column__item-free_day{
   width: 125px;
   height: 100%;

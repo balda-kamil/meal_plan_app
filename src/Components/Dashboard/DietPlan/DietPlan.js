@@ -14,7 +14,7 @@ function DietPlan(props){
 
       { days && 
       days.map( day => ( day.isFree ? (
-        <DayColumnFree name={day.name}/>
+        <DayColumnFree name={day.name} key={day.id}/>
 
       ) : (
         <DayColumn 

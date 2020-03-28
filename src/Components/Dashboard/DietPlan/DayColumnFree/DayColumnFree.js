@@ -11,7 +11,7 @@ function DayColumnFree(props){
         <img src={`${process.env.PUBLIC_URL}/img/Happy_ico.svg`} alt="happy face"/>
       </div>
 
-      {/* <DietPlanColumnCarboAndWorkout/> */}
+      {/* <DietPlanColumnPrint/> */}
     </div>
   )
 }
