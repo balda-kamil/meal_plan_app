@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './../Navbar/Navbar'
 import Footer from './../Footer/Footer'
 import ProgressDots from './ProgressDots/ProgressDots'
-import TimeChanger from './TimeChanger/TimeChanger'
+import DaySelect from './DaySelector/DaySelect'
 import TypeOfFoodOptions from './TypeOfFoodOptions/TypeOfFoodOptions'
 import './Dashboard.css'
 
@@ -14,6 +14,7 @@ export const DashboardConsumer = DashboardContext.Consumer
 class Dashboard extends React.Component {
   state = {
     progressDots: progressDotsJSON,
+    selectedWeek: 33,
     typeOfFoodOptions: [
       { 
         id: 1,
@@ -49,7 +50,13 @@ class Dashboard extends React.Component {
 
     optionStyle: optionId => ( 
       this.state.typeOfFoodOptions.filter(option => option.id === optionId)[0].disabled ?  true : false
-     )
+     ),
+
+    handleWeekChange: value => {
+      this.setState(prevState => ({
+        selectedWeek: Math.max(Math.min(prevState.selectedWeek + value, 52), 1)
+      }))
+     }
 
   }
 
@@ -73,7 +80,7 @@ class Dashboard extends React.Component {
           <div className="dashboardTop">
             <DashboardContext.Provider value={ this.state }>
               <ProgressDots />
-              <TimeChanger />
+              <DaySelect />
               <TypeOfFoodOptions />
             </DashboardContext.Provider>
           </div>

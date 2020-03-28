@@ -1,0 +1,6 @@
+.dashboard__day-select{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 279px;
+}

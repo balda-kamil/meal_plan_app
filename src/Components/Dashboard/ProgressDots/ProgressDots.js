@@ -8,13 +8,13 @@ class ProgressDots extends React.Component {
   return (
     <>
       <div>
-        <p className="xs-l-gray">YOUR 12 WEEK PROGRESS</p>
+        <p className="dashboardTop__text-info">YOUR 12 WEEK PROGRESS</p>
         <div className="ProgressDots__items">
         { progressDots.data.map(dot =>  <div className="ProgressDots__item" key={dot.weekNumber}>
                                           <div className={ dot.done ? "ProgressDots__item--past" : "ProgressDots__item--feature"}></div>
                                           { dot.current && <div className="ProgressDots__item--current"></div> }
                                           <div className={ dot.done ? "ProgressDots__item-line--past" : "ProgressDots__item-line--feature"}></div>
-                                          <p className="xs-l-gray">{dot.weekNumber}</p>
+                                          <p className="dashboardTop__text-info">{dot.weekNumber}</p>
                                         </div> 
                                           
                               )
