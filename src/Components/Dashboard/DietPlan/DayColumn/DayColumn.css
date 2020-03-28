@@ -1,3 +1,10 @@
 .dashboard__diet-plan_first-column{
   width: 85px;
 }
+
+.dashboard__dietColumn-active{
+  -webkit-box-shadow: 0 0 0 2px #ff801a;
+  box-shadow: 0 0 0 2px #ff801a;
+  z-index: 10;
+  font-weight: bold;
+}
