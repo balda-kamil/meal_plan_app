@@ -12,6 +12,10 @@ a{
   color: #828282;
 }
 
+p{
+  margin: 0;
+}
+
 .app__main__content-wrapper{
   max-width: 978px;
   margin: 0 auto

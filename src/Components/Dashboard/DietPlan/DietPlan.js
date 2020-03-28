@@ -2,6 +2,7 @@ import React from 'react';
 import './DietPlan.css'
 import FirstColumn from './FirstColumn/FirstColumn'
 import DayColumn from './DayColumn/DayColumn'
+import DayColumnFree from './DayColumnFree/DayColumnFree'
 
 import { withDashboard } from './../Dashboard'
 
@@ -11,7 +12,11 @@ function DietPlan(props){
     <div className="dashboard__dietPlan-container">
       <FirstColumn/>
 
-      { days && days.map( day => 
+      { days && 
+      days.map( day => ( day.isFree ? (
+        <DayColumnFree name={day.name}/>
+
+      ) : (
         <DayColumn 
           key={day.id}
           id={day.id}
@@ -24,8 +29,10 @@ function DietPlan(props){
           current={day.current}
           carb={day.carb}
           workoutIsDone={day.workoutIsDone}
-          isFree={day.isFree}
-        />) }
+        />
+        )
+      ))
+         }
     </div>
   )
 }

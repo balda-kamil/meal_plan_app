@@ -8,7 +8,7 @@ function FirstColumn(){
     }
   return(
     <div className="dashboard__diet-plan_first-column" style={ backgroundStyle }>
-      <div className="plan__day"/>
+      <div className="column__day"/>
       <div className="plan__item plan__hour">
         <span className="text-bold">6:00</span> AM
       </div>

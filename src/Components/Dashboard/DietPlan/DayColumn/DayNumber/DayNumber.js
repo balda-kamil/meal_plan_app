@@ -2,7 +2,7 @@ import React from 'react'
 
 function DayNumber(props){
   return(
-    <div>
+    <div className="column__day">
       <p>{props.name}</p>
     </div>
   )
