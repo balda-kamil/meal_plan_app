@@ -4,6 +4,7 @@ import Footer from './../Footer/Footer'
 import ProgressDots from './ProgressDots/ProgressDots'
 import DaySelect from './DaySelector/DaySelect'
 import TypeOfFoodOptions from './TypeOfFoodOptions/TypeOfFoodOptions'
+import DietPlan from './DietPlan/DietPlan'
 import './Dashboard.css'
 
 import progressDotsJSON from './progress_dots_data.json'
@@ -14,7 +15,7 @@ export const DashboardConsumer = DashboardContext.Consumer
 class Dashboard extends React.Component {
   state = {
     progressDots: progressDotsJSON,
-    selectedWeek: 33,
+    selectedWeek: 7,
     typeOfFoodOptions: [
       { 
         id: 1,
@@ -57,18 +58,20 @@ class Dashboard extends React.Component {
         selectedWeek: Math.max(Math.min(prevState.selectedWeek + value, 52), 1)
       }))
      }
-
   }
 
   componentDidUpdate = () => {
-    const { typeOfFoodOptions } = this.state
-    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(typeOfFoodOptions) )
+    const { typeOfFoodOptions, selectedWeek } = this.state
+    localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(typeOfFoodOptions))
+    localStorage.setItem('SelectedWeekState', JSON.stringify(selectedWeek))
   }
 
   componentWillMount = () => {
-    let data = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
+    let typeOfFoodOptionsState = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
+    let SelectedWeekState = JSON.parse(localStorage.getItem('SelectedWeekState'))
     this.setState({
-      typeOfFoodOptions: data
+      typeOfFoodOptions: typeOfFoodOptionsState,
+      selectedWeek: SelectedWeekState
     })
   }
 
@@ -77,13 +80,14 @@ class Dashboard extends React.Component {
       <>
         <Navbar/>
         <div className="app__main__content-wrapper">
-          <div className="dashboardTop">
-            <DashboardContext.Provider value={ this.state }>
+          <DashboardContext.Provider value={ this.state }>
+            <div className="dashboardTop">
               <ProgressDots />
               <DaySelect />
               <TypeOfFoodOptions />
-            </DashboardContext.Provider>
-          </div>
+            </div>
+            <DietPlan/>
+          </DashboardContext.Provider>
           <Footer/>
         </div>
       </>

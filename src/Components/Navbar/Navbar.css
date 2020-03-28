@@ -1,9 +1,9 @@
 .nav__container{
   border-bottom: 1px solid #e1e1e1;
+  background-color: #fff;
 }
 
 nav{
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
   max-width: 978px;
