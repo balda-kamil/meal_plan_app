@@ -5,6 +5,13 @@
 .dashboard__dietColumn{
   -webkit-box-shadow: -2px 0 0 rgba(0, 0, 0, 0.062);
   box-shadow: -2px 0 0 rgba(0, 0, 0, 0.062);
+  width: 126px;
+}
+
+.dashboard__dietColumn .column__day,
+.dashboard__dietColumn .column__item,
+.column__item-free_day{
+  background-color: #fff;;
 }
 
 .dashboard__dietColumn-active{
@@ -38,7 +45,7 @@
   font-size: 13px;
   line-height: 18px;
   height: 92px;
-  width: 128px;
+  width: 124px;
   -webkit-box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
   box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
   -webkit-box-sizing: border-box;
@@ -64,7 +71,7 @@
 
 .column__item-free_day{
   width: 125px;
-  height: 100%;
+  height: 460px;
   position: relative;
   -webkit-box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
   box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
@@ -80,11 +87,23 @@
   text-transform: uppercase;
   position: absolute;
   top: 180px;
-  right: -80px;
+  right: -75px;
 }
 
 .column__item-free_day img{
   position: absolute;
   bottom: 68px;
   right: 48px;
+}
+
+.plan__item-print{
+  width: 125px;
+  height: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
 }

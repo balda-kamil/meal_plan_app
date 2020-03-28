@@ -1,5 +1,6 @@
 import React from 'react'
 import DayNumber from './../DayColumn/DayNumber/DayNumber'
+import DietPlanColumnPrint from './DietPlanColumnPrint'
 
 function DayColumnFree(props){
   const { id, name, current } = props
@@ -10,8 +11,7 @@ function DayColumnFree(props){
         <p>guilt-free day</p>
         <img src={`${process.env.PUBLIC_URL}/img/Happy_ico.svg`} alt="happy face"/>
       </div>
-
-      {/* <DietPlanColumnPrint/> */}
+      <DietPlanColumnPrint/>
     </div>
   )
 }
