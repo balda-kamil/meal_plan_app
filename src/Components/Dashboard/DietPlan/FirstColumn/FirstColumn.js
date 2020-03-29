@@ -4,7 +4,6 @@ import './FirstColumn.css'
 function FirstColumn(){
   let backgroundStyle = { 
     backgroundImage: 'url(' + `${process.env.PUBLIC_URL}` + '/img/plan_background_left.png)',
-    backgroundSize: "cover",
     }
   return(
     <div className="dashboard__diet-plan_first-column" style={ backgroundStyle }>

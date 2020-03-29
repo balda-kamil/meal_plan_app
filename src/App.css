@@ -54,3 +54,9 @@ footer button:hover{
 .color-a2a2a2{
   color: #a2a2a2;
 }
+
+@media all and (max-width: 991px){
+  .app__main__content-wrapper{
+    padding: 0 5px;
+  }
+}

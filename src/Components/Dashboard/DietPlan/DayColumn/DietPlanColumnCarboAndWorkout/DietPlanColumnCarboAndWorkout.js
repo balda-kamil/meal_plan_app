@@ -7,7 +7,6 @@ function DietPlanColumnCarboAndWorkout(props){
   let { handleWorkoutDone, id } = props
   let backgroundStyle = { 
     backgroundImage: 'url(' + `${process.env.PUBLIC_URL}` + '/img/plan_background_bottom.png)',
-    backgroundSize: "cover",
   }
   return(
     <div style={backgroundStyle}>

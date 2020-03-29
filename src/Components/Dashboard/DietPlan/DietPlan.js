@@ -3,7 +3,6 @@ import './DietPlan.css'
 import FirstColumn from './FirstColumn/FirstColumn'
 import DayColumn from './DayColumn/DayColumn'
 import DayColumnFree from './DayColumnFree/DayColumnFree'
-
 import { withDashboard } from './../Dashboard'
 
 function DietPlan(props){
@@ -36,9 +35,10 @@ function DietPlan(props){
         days && 
         days.filter(day => day.id === selectedDay)
             .map(day => day.isFree ? (
-              <DayColumnFree name={day.name} key={day.id}/>
+              <DayColumnFree mobile={true} name={day.name} key={day.id}/>
                 ) : ( 
                   <DayColumn 
+                    mobile={true}
                     key={day.id}
                     id={day.id}
                     name={day.name}

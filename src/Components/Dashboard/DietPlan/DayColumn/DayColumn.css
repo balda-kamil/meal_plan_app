@@ -14,13 +14,6 @@
   background-color: #fff;;
 }
 
-.dashboard__dietColumn-active{
-  -webkit-box-shadow: 0 0 0 2px #ff801a;
-  box-shadow: 0 0 0 2px #ff801a;
-  z-index: 10;
-  font-weight: bold;
-}
-
 .column__day{
   height: 50px;
   font-size: 24px;
@@ -29,14 +22,6 @@
   color: #adbb0c;
   font-weight: bold;
   text-align: center;
-}
-
-.dashboard__dietColumn-active .column__day{
-  color: #ff801a;
-}
-
-.dashboard__dietColumn-active .column__item p{
-  color: #000;
 }
 
 .column__item{
@@ -107,4 +92,12 @@
   -ms-flex-align: center;
   align-items: center;
   font-size: 18px;
+}
+
+.dashboard__dietColumn.mobile{
+  width: 100%;
+}
+
+.dashboard__dietColumn.mobile div{
+  width: 100%;
 }
