@@ -9,12 +9,12 @@ function DayColumn(props){
     return(
     <div className={ current ? "dashboard__dietColumn dashboard__dietColumn-active" : "dashboard__dietColumn"}>
       <DayNumber id={id} name={name} current={current}/>
-        <DietPlanColumnItem data={meal6am} current={current}/>
-        <DietPlanColumnItem data={meal9am} current={current}/>
-        <DietPlanColumnItem data={meal12pm} current={current}/>
-        <DietPlanColumnItem data={meal3pm} current={current}/>
-        <DietPlanColumnItem data={meal6pm} current={current}/>
-      <DietPlanColumnCarboAndWorkout/>
+      <DietPlanColumnItem data={meal6am} current={current}/>
+      <DietPlanColumnItem data={meal9am} current={current}/>
+      <DietPlanColumnItem data={meal12pm} current={current}/>
+      <DietPlanColumnItem data={meal3pm} current={current}/>
+      <DietPlanColumnItem data={meal6pm} current={current}/>
+      <DietPlanColumnCarboAndWorkout carb={carb} workoutIsDone={workoutIsDone}/>
     </div>
   )
 }

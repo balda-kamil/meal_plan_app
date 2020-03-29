@@ -7,7 +7,8 @@ function DietPlanColumnPrint(props){
   }
     return(
     <div style={backgroundStyle} className="plan__item-print">
-      Print
+      <img src={`${process.env.PUBLIC_URL}/img/printer_ico.svg`} alt="printer" className="p-13"/>
+      <p className="color-a2a2a2">Print</p>
     </div>
   )
 }

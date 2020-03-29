@@ -42,7 +42,7 @@
 .column__item{
   position: relative;
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   height: 92px;
   width: 124px;
@@ -50,7 +50,7 @@
   box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 13px 19px 0 9px;
+  padding: 11px 19px 0 11px;
   cursor: pointer;
 }
 
@@ -58,9 +58,10 @@
   margin-bottom: 2px;
 }
 
-.column__item img{
-  display: block;
-  margin: 0 auto;
+.column__item-shake-img{
+  position: absolute;
+  bottom: 2px;
+  left: 20px;
 }
 
 .column__item-checkout-ico{

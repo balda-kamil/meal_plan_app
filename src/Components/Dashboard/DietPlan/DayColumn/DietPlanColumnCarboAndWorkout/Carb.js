@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Carb(){
+function Carb(props){
     return(
     <div className="plan__carb">
-      carb
+      {props.carb}
     </div>
   )
 }
