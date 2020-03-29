@@ -5,3 +5,10 @@
   margin: 3px 46px;
   width: 190px;
 }
+
+@media all and (max-width: 467px){
+  .dashboard__daySelectText{
+    font-size: 32px;
+    width: unset;
+  }
+}

@@ -11,3 +11,29 @@
   margin-top: 0;
   margin-bottom: 13px;
 }
+
+@media all and (max-width: 991px){
+  .dashboardTop{
+    height: 120px;
+  }
+  .dashboard__day-select{
+    align-items: flex-end;
+  }
+}
+
+@media all and (max-width: 768px){
+  .dashboardTop{
+    height: unset;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .dashboardTop div:first-child{
+    margin-bottom: 20px;
+  }
+  .dashboard__day-select{
+    margin-top: 40px;
+    order: 9
+  }
+}

@@ -7,7 +7,6 @@ import { withDashboard } from './../Dashboard'
 
 function DietPlan(props){
   const { days, windowWidth, selectedDay } = props 
-  console.log(props)
   return(
     <div className="dashboard__dietPlan-container">
       <FirstColumn/>

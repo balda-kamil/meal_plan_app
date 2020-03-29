@@ -115,6 +115,8 @@
   .column__item-free_day p{
     position: unset;
     transform: none;
+    width: unset;
+    text-align: center;
   }
   .column__item-free_day img {
     position: unset;

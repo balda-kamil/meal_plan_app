@@ -1,11 +1,12 @@
 import React from 'react'
+import { withDashboard } from './../../../Dashboard'
 
 function DayNumber(props){
   return(
     <div className="column__day">
-      <p>{props.name}</p>
+      <p>{ props.windowWidth > 991 ? props.name : "MEAL" }</p>
     </div>
   )
 }
 
-export default DayNumber
+export default withDashboard(DayNumber)
