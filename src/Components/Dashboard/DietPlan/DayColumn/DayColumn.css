@@ -8,6 +8,13 @@
   width: 126px;
 }
 
+.dashboard__dietColumn-active{
+  box-shadow: 0 0 0 2px #ff801a;
+  z-index: 10;
+  font-weight: bold;
+  color: #000
+}
+
 .dashboard__dietColumn .column__day,
 .dashboard__dietColumn .column__item,
 .column__item-free_day{
@@ -94,10 +101,23 @@
   font-size: 18px;
 }
 
-.dashboard__dietColumn.mobile{
-  width: 100%;
-}
-
-.dashboard__dietColumn.mobile div{
-  width: 100%;
+@media all and (max-width: 991px){
+  .dashboard__dietColumn,
+  .dashboard__dietColumn div{
+    width: 100%;
+  }
+  .column__item-free_day{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .column__item-free_day p{
+    position: unset;
+    transform: none;
+  }
+  .column__item-free_day img {
+    position: unset;
+    margin-top: 30px;
+  }
 }

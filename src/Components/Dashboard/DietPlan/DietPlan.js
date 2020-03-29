@@ -35,10 +35,9 @@ function DietPlan(props){
         days && 
         days.filter(day => day.id === selectedDay)
             .map(day => day.isFree ? (
-              <DayColumnFree mobile={true} name={day.name} key={day.id}/>
+              <DayColumnFree name={day.name} key={day.id}/>
                 ) : ( 
                   <DayColumn 
-                    mobile={true}
                     key={day.id}
                     id={day.id}
                     name={day.name}
