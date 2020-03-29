@@ -24,6 +24,7 @@ class Dashboard extends React.Component {
     windowWidth: window.innerWidth,
     progressDots: progressDotsJSON,
     selectedWeek: 7,
+    selectedDay: 65,
     typeOfFoodOptions: [
       { 
         id: 1,
@@ -62,10 +63,17 @@ class Dashboard extends React.Component {
      ),
 
     handleWeekChange: value => {
+      console.log('cost tm')
       this.setState(prevState => ({
         selectedWeek: Math.max(Math.min(prevState.selectedWeek + value, 52), 1)
       }))
      },
+
+    handleDayChange: value => {
+    this.setState(prevState => ({
+      selectedDay: Math.max(Math.min(prevState.selectedDay + value, 70), 64)
+    }))
+    },
 
     handleWorkoutDone: id => {
       this.setState(prevState => ({
@@ -99,15 +107,17 @@ class Dashboard extends React.Component {
     }
 
   componentDidUpdate = () => {
-    const { typeOfFoodOptions, selectedWeek, days } = this.state
+    const { typeOfFoodOptions, selectedWeek, selectedDay, days } = this.state
     localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(typeOfFoodOptions))
     localStorage.setItem('SelectedWeekState', JSON.stringify(selectedWeek))
+    localStorage.setItem('SelectedDayState', JSON.stringify(selectedDay))
     localStorage.setItem('DaysDataState', JSON.stringify(days))
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     let typeOfFoodOptionsState = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
     let SelectedWeekState = JSON.parse(localStorage.getItem('SelectedWeekState'))
+    let SelectedDayState = JSON.parse(localStorage.getItem('SelectedDayState'))
     let DaysDataState = JSON.parse(localStorage.getItem('DaysDataState'))
 
     typeOfFoodOptionsState !== null && (
@@ -119,6 +129,12 @@ class Dashboard extends React.Component {
     SelectedWeekState !== null && (
       this.setState({
         selectedWeek: SelectedWeekState
+      })
+    )
+
+    SelectedDayState !== null && (
+      this.setState({
+        selectedDay: SelectedDayState
       })
     )
 
@@ -144,7 +160,6 @@ class Dashboard extends React.Component {
   };
 
   render(){
-    console.log(this.state.windowWidth)
     return (
       <>
         <Navbar/>

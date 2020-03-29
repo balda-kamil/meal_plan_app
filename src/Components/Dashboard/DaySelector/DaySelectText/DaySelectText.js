@@ -3,10 +3,10 @@ import './DaySelectText.css'
 import { withDashboard } from './../../Dashboard'
 
 function DaySelectText(props) {
-  const { selectedWeek }  = props
+  const { number, text }  = props
   return (
     <div>
-      <p className="dashboard__daySelectText">Week { selectedWeek }</p>
+      <p className="dashboard__daySelectText">{text} { number }</p>
     </div>
   );
 }
