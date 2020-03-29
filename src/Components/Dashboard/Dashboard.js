@@ -21,6 +21,7 @@ const toggleMeal = (meal, id) =>
     : meal)
 class Dashboard extends React.Component {
   state = {
+    windowWidth: window.innerWidth,
     progressDots: progressDotsJSON,
     selectedWeek: 7,
     typeOfFoodOptions: [
@@ -134,9 +135,16 @@ class Dashboard extends React.Component {
         }))
       .catch(err => err.message)
     )
+
+    window.addEventListener('resize', this.updateDimensions);
   }
 
+  updateDimensions = () => {
+    this.setState({ windowWidth: window.innerWidth });
+  };
+
   render(){
+    console.log(this.state.windowWidth)
     return (
       <>
         <Navbar/>
