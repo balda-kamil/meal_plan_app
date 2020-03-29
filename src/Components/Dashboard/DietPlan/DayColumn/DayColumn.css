@@ -44,10 +44,15 @@
   box-sizing: border-box;
   padding: 11px 19px 0 11px;
   cursor: pointer;
+  transition: .3s
 }
 
 .column__item p{
   margin-bottom: 2px;
+}
+
+.column__item:hover{
+  color: #adbb0c;
 }
 
 .column__item-shake-img{

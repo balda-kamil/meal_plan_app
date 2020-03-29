@@ -8,7 +8,6 @@ import { withDashboard } from './../Dashboard'
 
 function DaySelect(props) {
   const { windowWidth, selectedDay, selectedWeek } = props
-  console.log(props)
   return (
     <div className="dashboard__day-select">
       { windowWidth > 991 ? (
