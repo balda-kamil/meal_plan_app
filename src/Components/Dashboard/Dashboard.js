@@ -12,6 +12,13 @@ import progressDotsJSON from './progress_dots_data.json'
 const DashboardContext = React.createContext()
 export const DashboardConsumer = DashboardContext.Consumer
 
+const toggleMeal = (meal, id) =>
+  (meal.id === id
+    ? {
+      ...meal,
+      done: !meal.done,
+    }
+    : meal)
 class Dashboard extends React.Component {
   state = {
     progressDots: progressDotsJSON,
@@ -57,32 +64,76 @@ class Dashboard extends React.Component {
       this.setState(prevState => ({
         selectedWeek: Math.max(Math.min(prevState.selectedWeek + value, 52), 1)
       }))
-     }
-  }
+     },
+
+    handleWorkoutDone: id => {
+      this.setState(prevState => ({
+        days: prevState.days.map(
+          day => ( day.id === id ? {
+            ...day,
+            workoutIsDone: !day.workoutIsDone,
+          } : day )
+        )
+      }))
+    },
+
+    handleMealDone: id =>
+      this.setState(prevState => ({
+        days: prevState.days.map(
+          day =>
+            (!day.isFree
+              ? {
+                ...day,
+                meal6am: toggleMeal(day.meal6am, id),
+                meal9am: toggleMeal(day.meal9am, id),
+                meal12pm: toggleMeal(day.meal12pm, id),
+                meal3pm: toggleMeal(day.meal3pm, id),
+                meal6pm: toggleMeal(day.meal6pm, id),
+              }
+              : {
+                ...day,
+              }),
+        ),
+      }))
+    }
 
   componentDidUpdate = () => {
-    const { typeOfFoodOptions, selectedWeek } = this.state
+    const { typeOfFoodOptions, selectedWeek, days } = this.state
     localStorage.setItem('TypeOfFoodOptionsState', JSON.stringify(typeOfFoodOptions))
     localStorage.setItem('SelectedWeekState', JSON.stringify(selectedWeek))
+    localStorage.setItem('DaysDataState', JSON.stringify(days))
   }
 
   componentWillMount = () => {
     let typeOfFoodOptionsState = JSON.parse(localStorage.getItem('TypeOfFoodOptionsState'))
     let SelectedWeekState = JSON.parse(localStorage.getItem('SelectedWeekState'))
-    this.setState({
-      typeOfFoodOptions: typeOfFoodOptionsState,
-      selectedWeek: SelectedWeekState
-    })
-  }
+    let DaysDataState = JSON.parse(localStorage.getItem('DaysDataState'))
 
-  componentDidMount = () => {
-    fetch(`${process.env.PUBLIC_URL}/data/days.json`)
+    typeOfFoodOptionsState !== null && (
+      this.setState({
+        typeOfFoodOptions: typeOfFoodOptionsState
+      })
+    )
+
+    SelectedWeekState !== null && (
+      this.setState({
+        selectedWeek: SelectedWeekState
+      })
+    )
+
+    DaysDataState ? (
+      this.setState({
+        days: DaysDataState
+      })
+    ) : (    
+      fetch(`${process.env.PUBLIC_URL}/data/days.json`)
       .then(res => res.json())
       .then(days =>
         this.setState({
           days,
         }))
       .catch(err => err.message)
+    )
   }
 
   render(){

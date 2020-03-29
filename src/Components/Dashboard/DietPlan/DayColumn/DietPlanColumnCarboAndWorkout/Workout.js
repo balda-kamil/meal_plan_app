@@ -3,7 +3,7 @@ import React from 'react'
 function Workout(props){
 
     return(
-    <div className="plan__workout">
+    <div className="plan__workout" onClick={props.onClick}>
       { props.workoutIsDone ? (
         <>
           <img src={`${process.env.PUBLIC_URL}/img/barbells_ico_orange.png`} alt="workout"/>
