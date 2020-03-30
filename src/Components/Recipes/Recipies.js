@@ -8,7 +8,7 @@ function Recipies() {
     <>
       <Navbar/>
       <div className="app__main__content-wrapper">
-      recipies...dfsdfsdfsdfsd
+      Recipies Component
       <Footer/>
     </div>
     </>

@@ -7,7 +7,7 @@ function Challenge() {
     <>
       <Navbar/>
       <div className="app__main__content-wrapper">
-        challenge
+        Challenge Component
       <Footer/>
       </div>
     </>

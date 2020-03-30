@@ -3,8 +3,8 @@
 }
 
 .dashboard__dietColumn{
-  -webkit-box-shadow: -2px 0 0 rgba(0, 0, 0, 0.062);
-  box-shadow: -2px 0 0 rgba(0, 0, 0, 0.062);
+  -webkit-box-shadow: 2px 0 0 rgba(0, 0, 0, 0.062);
+  box-shadow: 2px 0 0 #00000010;
   width: 126px;
 }
 
