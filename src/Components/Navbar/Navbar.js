@@ -4,8 +4,7 @@ import NavbarSingleLink from './NavbarSingleLink/NavbarSingleLink'
 import NavbarUserRightContainer from './NavbarUserRightContainer/NavbarUserRightContainer'
 import { slide as HamburgerMenu } from 'react-burger-menu'
 
-function Navbar(props){
-  console.log(props)
+function Navbar(){
   return(
     <div className="nav__container">
       <nav>
