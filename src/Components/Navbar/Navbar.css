@@ -10,6 +10,10 @@ nav{
   margin: 0 auto;
 }
 
+nav div:first-of-type{
+  display: none;
+}
+
 nav li{
   list-style-type: none;
 }
@@ -179,5 +183,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
   .nav__link--active::after{
     top: 36px;
+  }
+  nav div:first-of-type{
+    display: block;
   }
 }
