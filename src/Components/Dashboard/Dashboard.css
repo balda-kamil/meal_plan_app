@@ -1,10 +1,10 @@
-.dashboardTop{
+.dashboardTop {
   display: flex;
   justify-content: space-between;
   padding-top: 35px;
 }
 
-.dashboardTop__text-info{
+.dashboardTop__text-info {
   color: #828282;
   font-size: 9px;
   line-height: 9px;
@@ -12,28 +12,28 @@
   margin-bottom: 13px;
 }
 
-@media all and (max-width: 991px){
-  .dashboardTop{
+@media all and (max-width: 991px) {
+  .dashboardTop {
     height: 120px;
   }
-  .dashboard__day-select{
+  .dashboard__day-select {
     align-items: flex-end;
   }
 }
 
-@media all and (max-width: 768px){
-  .dashboardTop{
+@media all and (max-width: 768px) {
+  .dashboardTop {
     height: unset;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  .dashboardTop div:first-child{
+  .dashboardTop div:first-child {
     margin-bottom: 20px;
   }
-  .dashboard__day-select{
+  .dashboard__day-select {
     margin-top: 40px;
-    order: 9
+    order: 9;
   }
 }

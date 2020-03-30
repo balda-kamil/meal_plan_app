@@ -1,25 +1,25 @@
-.dashboard__diet-plan_first-column{
+.dashboard__diet-plan_first-column {
   width: 85px;
 }
 
-.dashboard__dietColumn{
+.dashboard__dietColumn {
   width: 128px;
 }
 
-.dashboard__dietColumn-active{
+.dashboard__dietColumn-active {
   box-shadow: 0 0 0 2px #ff801a;
   z-index: 10;
   font-weight: bold;
-  color: #000
+  color: #000;
 }
 
 .dashboard__dietColumn .column__day,
 .dashboard__dietColumn .column__item,
-.column__item-free_day{
-  background-color: #fff;;
+.column__item-free_day {
+  background-color: #fff;
 }
 
-.column__day{
+.column__day {
   height: 50px;
   font-size: 24px;
   line-height: 46px;
@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.column__item{
+.column__item {
   position: relative;
   font-family: Arial, sans-serif;
   font-size: 12px;
@@ -42,31 +42,31 @@
   box-sizing: border-box;
   padding: 11px 19px 0 11px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   border-right: 2px solid rgba(0, 0, 0, 0.062);
 }
 
-.column__item p{
+.column__item p {
   margin-bottom: 2px;
 }
 
-.column__item:hover{
+.column__item:hover {
   color: #adbb0c;
 }
 
-.column__item-shake-img{
+.column__item-shake-img {
   position: absolute;
   bottom: 2px;
   left: 20px;
 }
 
-.column__item-checkout-ico{
+.column__item-checkout-ico {
   position: absolute;
   top: 6px;
-  right: 6px
+  right: 6px;
 }
 
-.column__item-free_day{
+.column__item-free_day {
   width: 125px;
   height: 460px;
   position: relative;
@@ -75,7 +75,7 @@
   position: relative;
 }
 
-.column__item-free_day p{
+.column__item-free_day p {
   transform: rotate(-90deg);
   width: 283px;
   font-size: 36px;
@@ -87,13 +87,13 @@
   right: -75px;
 }
 
-.column__item-free_day img{
+.column__item-free_day img {
   position: absolute;
   bottom: 68px;
   right: 48px;
 }
 
-.plan__item-print{
+.plan__item-print {
   width: 125px;
   height: 70px;
   display: -ms-flexbox;
@@ -106,18 +106,18 @@
   cursor: pointer;
 }
 
-@media all and (max-width: 991px){
+@media all and (max-width: 991px) {
   .dashboard__dietColumn,
-  .dashboard__dietColumn div{
+  .dashboard__dietColumn div {
     width: 100%;
   }
-  .column__item-free_day{
+  .column__item-free_day {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .column__item-free_day p{
+  .column__item-free_day p {
     position: unset;
     transform: none;
     width: unset;
@@ -127,7 +127,7 @@
     position: unset;
     margin-top: 30px;
   }
-  .plan__item-print{
+  .plan__item-print {
     display: none;
   }
 }

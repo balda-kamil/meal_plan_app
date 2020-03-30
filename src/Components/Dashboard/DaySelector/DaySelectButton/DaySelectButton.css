@@ -4,10 +4,10 @@
   max-height: 42px;
 }
 
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) {
   .dashboard__time-select__button {
     height: calc(100% - 3px);
     padding: 13px;
     max-height: 42px;
-}
+  }
 }

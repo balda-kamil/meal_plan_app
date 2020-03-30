@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react"
 
-function TypeOfFoodButtonChange(props){
+function TypeOfFoodButtonChange(props) {
   return (
     <button onClick={props.onClick} className="TypeOfFoodChangeButton">
-      <img 
-        src={ props.optionStyle ? `${process.env.PUBLIC_URL}/img/option_${props.optionId}.png` : `${process.env.PUBLIC_URL}/img/option_${props.optionId}_disabled.png` } 
-        alt={`option ${props.optionId}` }
+      <img
+        src={
+          props.optionStyle
+            ? `${process.env.PUBLIC_URL}/img/option_${props.optionId}.png`
+            : `${process.env.PUBLIC_URL}/img/option_${props.optionId}_disabled.png`
+        }
+        alt={`option ${props.optionId}`}
       />
     </button>
-    );
-  }
+  )
+}
 
-export default TypeOfFoodButtonChange;
+export default TypeOfFoodButtonChange

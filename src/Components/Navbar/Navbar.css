@@ -1,47 +1,47 @@
-.nav__container{
+.nav__container {
   border-bottom: 1px solid #e1e1e1;
   background-color: #fff;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   max-width: 978px;
   margin: 0 auto;
 }
 
-nav div:first-of-type{
+nav div:first-of-type {
   display: none;
 }
 
-nav li{
+nav li {
   list-style-type: none;
 }
 
-.nav__link--active{
+.nav__link--active {
   color: #ff801a;
   position: relative;
 }
 
-.nav__link--active::after{
+.nav__link--active::after {
   content: "";
   position: absolute;
   width: 25px;
   height: 2px;
   top: 24px;
   background-color: #ffc79a;
-  right: calc(50% - 12.5px)
+  right: calc(50% - 12.5px);
 }
 
-.nav__links{
+.nav__links {
   display: flex;
   position: relative;
   margin: 0;
   padding: 0;
-  margin-left: 118px
+  margin-left: 118px;
 }
 
-.nav__links::before{
+.nav__links::before {
   content: "";
   width: 1px;
   background-color: #e1e1e1;
@@ -51,19 +51,18 @@ nav li{
   top: 0;
 }
 
-.nav__links li{
+.nav__links li {
   text-transform: uppercase;
   margin-left: 18px;
   list-style-type: none;
   text-decoration: none;
 }
 
-.nav__links li a{
+.nav__links li a {
   font-size: 14px;
   line-height: 79px;
   font-weight: 600;
 }
-
 
 /* ________________ EXTERNAL CODE __________________ */
 /* hamburger menu css */
@@ -140,51 +139,50 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* ^^^^^^^^^^^^^^ EXTERNAL CODE ^^^^^^^^^^^^^^^^^^ */
 
-
-@media all and (max-width: 991px){
-  nav{
+@media all and (max-width: 991px) {
+  nav {
     margin: 0 40px;
   }
-  .nav__links{
+  .nav__links {
     margin-left: unset;
   }
 }
 
-@media all and (max-width: 550px){
-  nav{
+@media all and (max-width: 550px) {
+  nav {
     margin: 0 20px 0 0;
   }
-  .nav__links::before{
+  .nav__links::before {
     content: none;
   }
-  .nav__links{
+  .nav__links {
     display: none;
   }
-  .nav__user-right span{
+  .nav__user-right span {
     display: none;
   }
-  .nav__user-right img{
+  .nav__user-right img {
     padding-right: 15px;
   }
   .bm-burger-button,
   .bm-overlay,
-  .bm-menu-wrap{
+  .bm-menu-wrap {
     display: block;
   }
-  .bm-item-list{
-    height: 90%!important;;
+  .bm-item-list {
+    height: 90% !important;
   }
-  .bm-item-list li a{
+  .bm-item-list li a {
     font-size: 24px;
     margin-bottom: 30px;
   }
-  .bm-item-list li{
+  .bm-item-list li {
     margin-bottom: 30px;
   }
-  .nav__link--active::after{
+  .nav__link--active::after {
     top: 36px;
   }
-  nav div:first-of-type{
+  nav div:first-of-type {
     display: block;
   }
 }

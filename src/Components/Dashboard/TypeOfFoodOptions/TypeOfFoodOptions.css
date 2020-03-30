@@ -1,10 +1,10 @@
-.TypeOfFoodChangeButton{
+.TypeOfFoodChangeButton {
   border: none;
   background: none;
   margin-right: 16px;
   padding: 0;
 }
 
-.TypeOfFoodChangeButton img{
+.TypeOfFoodChangeButton img {
   height: 25px;
 }

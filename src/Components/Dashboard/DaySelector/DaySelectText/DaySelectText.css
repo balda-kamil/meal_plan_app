@@ -1,4 +1,4 @@
-.dashboard__daySelectText{
+.dashboard__daySelectText {
   color: #ff801a;
   font-size: 48px;
   line-height: 46px;
@@ -6,8 +6,8 @@
   width: 190px;
 }
 
-@media all and (max-width: 467px){
-  .dashboard__daySelectText{
+@media all and (max-width: 467px) {
+  .dashboard__daySelectText {
     font-size: 32px;
     width: unset;
   }

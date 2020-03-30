@@ -1,10 +1,8 @@
-import React from 'react'
+import React from "react"
 
-function NavbarUserPhoto(props){
+function NavbarUserPhoto(props) {
   const { imgSrc, alt } = props
-  return(
-    <img src={ imgSrc } alt={ alt }/>
-  )
+  return <img src={imgSrc} alt={alt} />
 }
 
-export default NavbarUserPhoto;
+export default NavbarUserPhoto
