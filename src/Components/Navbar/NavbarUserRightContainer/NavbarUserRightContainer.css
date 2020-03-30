@@ -1,6 +1,7 @@
 .nav__user-right{
   display: flex;
   align-items: center;
+  height: 79px;
 }
 
 .nav__user-right span{
