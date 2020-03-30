@@ -61,3 +61,32 @@ footer button:hover{
   }
 }
 
+
+@media print{
+  body{
+    width: 100%;
+    max-height: 20cm;
+  }
+  .column__item-shake-img{
+    max-width: 50px;
+  }
+  .dashboardTop__text-info,
+  .ProgressDots__items,
+  .nav__container{
+    display: none;
+  }
+  footer{
+    display: none!important;
+  }
+  .column__item{
+    font-size: 10px!important;
+    line-height: 12px!important;
+    color: #000;
+  }
+  .column__day p{
+    font-size: 16px;
+  }
+  .column__item-free_day p {
+    font-size: 16px!important;
+  }
+}

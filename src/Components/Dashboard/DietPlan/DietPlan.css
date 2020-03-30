@@ -28,6 +28,7 @@
   align-items: center;
   height: 35px;
   justify-content: center;
+  cursor: pointer;
 }
 
 .plan__workout img:first-of-type{
