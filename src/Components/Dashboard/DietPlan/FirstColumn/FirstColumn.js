@@ -8,7 +8,7 @@ function FirstColumn(){
   return(
     <div className="dashboard__diet-plan_first-column" style={ backgroundStyle }>
       <div className="column__day"/>
-      <div className="plan__item plan__hour">
+      <div className="plan__item plan__hour no-box-shadow">
         <span className="text-bold">6:00</span> AM
       </div>
       <div className="plan__item plan__hour">
@@ -23,8 +23,8 @@ function FirstColumn(){
       <div className="plan__item plan__hour">
         <span className="text-bold">6:00</span> PM
       </div>
-      <div className="plan__carb"></div>
-      <div className="plan__workout">
+      <div className="plan__carb no-border-right"></div>
+      <div className="plan__workout no-border-right">
         <p>Workout</p>
         <img src={`${process.env.PUBLIC_URL}/img/Rectangle_small.png`} alt="small rectangle" className="plan__workout-little_arrow"/>
       </div>

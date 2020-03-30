@@ -55,6 +55,14 @@ footer button:hover{
   color: #a2a2a2;
 }
 
+.no-box-shadow{
+  box-shadow: none!important;
+}
+
+.no-border-right{
+  border-right: none!important;
+}
+
 @media all and (max-width: 991px){
   .app__main__content-wrapper{
     padding: 0 5px;

@@ -3,9 +3,7 @@
 }
 
 .dashboard__dietColumn{
-  -webkit-box-shadow: 2px 0 0 rgba(0, 0, 0, 0.062);
-  box-shadow: 2px 0 0 #00000010;
-  width: 126px;
+  width: 128px;
 }
 
 .dashboard__dietColumn-active{
@@ -37,14 +35,15 @@
   font-size: 12px;
   line-height: 18px;
   height: 92px;
-  width: 124px;
+  width: 128px;
   -webkit-box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
   box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.062);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 11px 19px 0 11px;
   cursor: pointer;
-  transition: .3s
+  transition: .3s;
+  border-right: 2px solid rgba(0, 0, 0, 0.062);
 }
 
 .column__item p{
@@ -127,5 +126,8 @@
   .column__item-free_day img {
     position: unset;
     margin-top: 30px;
+  }
+  .plan__item-print{
+    display: none;
   }
 }

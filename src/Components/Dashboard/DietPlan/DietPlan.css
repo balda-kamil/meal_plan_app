@@ -3,6 +3,7 @@
   border-radius: 9px;
   border: 1px solid #f9f9f9;
   display: flex;
+  background-color: #fff;
 }
 
 .plan__item{
@@ -29,6 +30,7 @@
   height: 35px;
   justify-content: center;
   cursor: pointer;
+  border-right: 2px solid rgba(0, 0, 0, 0.062);
 }
 
 .plan__workout img:first-of-type{
@@ -52,4 +54,6 @@
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.062);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.062);
   color: #828282;
+  border-right: 2px solid rgba(0, 0, 0, 0.062);
+  box-sizing: border-box;
 }
