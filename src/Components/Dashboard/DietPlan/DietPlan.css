@@ -3,6 +3,7 @@
   border-radius: 9px;
   border: 1px solid #f9f9f9;
   display: flex;
+  display: -ms-flexbox;
   background-color: #fff;
 }
 
@@ -26,7 +27,9 @@
 
 .plan__workout {
   display: flex;
+  display: -ms-flexbox;
   align-items: center;
+  -ms-flex-align: center;
   height: 35px;
   justify-content: center;
   cursor: pointer;

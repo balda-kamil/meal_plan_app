@@ -41,6 +41,7 @@ button {
 footer button:hover {
   border-color: #ff801a;
   box-shadow: 0 0 5px 0 #ff801a;
+  -webkit-box-shadow: 0 0 5px 0 #ff801a;
 }
 
 .text-bold {

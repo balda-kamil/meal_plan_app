@@ -1,5 +1,6 @@
 .ProgressDots__items {
   display: flex;
+  display: -ms-flexbox;
   position: relative;
 }
 

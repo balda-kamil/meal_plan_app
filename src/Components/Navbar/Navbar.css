@@ -5,7 +5,9 @@
 
 nav {
   display: flex;
+  display: -ms-flexbox;
   justify-content: space-between;
+  -ms-flex-pack: center;
   max-width: 978px;
   margin: 0 auto;
 }
@@ -35,6 +37,7 @@ nav li {
 
 .nav__links {
   display: flex;
+  display: -ms-flexbox;
   position: relative;
   margin: 0;
   padding: 0;
